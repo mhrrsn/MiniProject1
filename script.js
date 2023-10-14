@@ -48,7 +48,6 @@ async function fetchRaceSeason() {
         races.forEach(race => {
             const row = document.createElement('tr');
             row.innerHTML = `
-            <td>${race.season}</td>
             <td>${race.round}</td>
             <td>${race.raceName}</td>
             <td>${race.date}</td>
