@@ -142,3 +142,17 @@ body .banner {
 .btn-secondary {
     background-color: #a6b6dd;
 }
+
+
+.card {
+    background-color:#a6b6dd ;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+}

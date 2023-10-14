@@ -73,6 +73,43 @@ window.onload = function() {
     });
 };
 
+// About.html Content Cards
+document.addEventListener("DOMContentLoaded", function (){
+    const data = [
+        { title: "Who am I?", text: "I'm Mia - Just a mid-twenties girlie trying to find her way in life!" },
+        {
+            title: "What is my professional / academic background?",
+            text: "I graduated from NUS in 2020 at the very start of the pandemic, with a Bachelor's in Global Studies (a multidisciplinary program that spanned across Political Science, History, Geography, Sociology etc.).<br><br>Out of graduation, I worked as a Research Executive at NTUC First Campus, an early childhood organization.<br><br>I then moved to my current role, Business Manager, at an Education Technology company."
+        },
+        {
+            title: "How did I become an F1 girlie?",
+            text: "One of the verticals that my company focuses on is Research, and racing was one of the key segments we focused on. Our ML capabilities analyzed various aspects of racing from car sensors to damage image recognition, and we even covered the commercial aspect of racing such as Brand Recognition.<<br><br>We're working with some of the F1 teams which pushed me to learn more about this part of motorsports.<br><br>It helped that Netflix had the F1 documentary, Drive to Survive, which made it very easy to jump on the F1 bandwagon.<br><br>And here I am!"
+        },
+        {
+            title: "Here's me on the Marina Bay Circuit this year, and tripping over myself!",
+            text: `        
+                <video controls width="240" height="380">
+                    <source src="../img/SGF1_2023.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>`
+        }
+    ];
+
+    function addCard(title, text) {
+        const template =
+        document.getElementById("card-template").content.cloneNode(true);
+
+        template.querySelector('.card-title').innerHTML = title;
+        template.querySelector('.card-text').innerHTML = text;
+
+        document.querySelector('#card-list').appendChild(template);
+    }
+    data.forEach(item => addCard(item.title, item.text));
+})
+
+
+
+
 //Contact Us Form
 document.addEventListener("DOMContentLoaded", function() {
     const contactForm = document.getElementById("contactForm");
