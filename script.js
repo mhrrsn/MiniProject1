@@ -9,6 +9,8 @@ async function fetchRaceResult() {
 
         const raceResults = data.MRData.RaceTable.Races[0].Results;
 
+        console.log('Race Results:', raceResults)
+
         const raceResultsElement = document.getElementById('raceResults');
         raceResults.forEach(result => {
             const row = document.createElement('tr');
@@ -39,6 +41,9 @@ async function fetchRaceSeason() {
         const data = await response.json();
 
         const races = data.MRData.RaceTable.Races;
+
+        console.log('Races in Season:', races);
+
         const raceElement = document.getElementById('races');
         races.forEach(race => {
             const row = document.createElement('tr');
@@ -111,20 +116,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
-// //Footer only appearing at the bottom of the page (if i scroll down)
-// document.addEventListener('DOMContentLoaded', function() {
-//     window.addEventListener('scroll', function() {
-//         const footer = document.querySelector('.footer-desktop');
-//         const scrollPosition = window.scrollY;
-//         const windowHeight = window.innerHeight;
-//         const pageHeight = document.documentElement.scrollHeight;
-
-//         // Check if the user has scrolled to the bottom of the page
-//         if (scrollPosition + windowHeight >= pageHeight) {
-//             footer.style.display = 'flex'; // Show the footer
-//         } else {
-//             footer.style.display = 'none'; // Hide the footer
-//         }
-//     });
-// });
