@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="script.js"></script>
+
+</head>
+<body class="custom-background">
+    <div class="webpage">
+            <div class="top-bar">
+                <a class="logo" href="index.html">
+                    <h2>F1 Girlie's Cheat Sheet</h2>
+                    <img class="hearts" src="img/hearts.svg" />
+                </a>
+                <div class="top-bar-pages">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/index.html">
+                            <h3>Main Cheat Sheet</h3>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="index.html#race-result-block">Latest Race Results</a>
+                            <a class="dropdown-item" href="index.html#2023-season-list-block">2023 Racing Season List</a>
+                        </div>
+                    </div>
+                </div>
+                <a class="top-bar-pages" href="/about.html">
+                    <h3>About Ur F1 Girlie</h3>
+                </a>
+                <a class="top-bar-pages" href="/contact.html">
+                    <h3>Contact Me</h3>
+                </a>
+            </div>
+            </div>
+        </br>
+        <div class="container mt-5">
+            <div class="contact-form">
+                <h2>Contact Ur F1 Girlie Below</h2>
+                <form id="contactForm">
+                    <div class="mb-3" id="name">
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-input" id="inputName" required>
+                    </div>
+                    <div class="mb-3" id="email">
+                        <label for="inputEmail">Email</label>
+                        <input type="text" class="form-input" id="inputEmail" required>
+                    </div>
+                    <div class="mb-3" id="message">
+                        <label for="inputMessage">Message</label>
+                        <input type="text" class="form-input" id="inputMessage" required>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Submit!</button>
+                </form>
+            </div>
+            <div class="submitted-data" style="display: none;">
+                <h3>Ur Submitted Form</h3>
+                <p><strong>Name:</strong> <span id="submittedName"></span></p>
+                <p><strong>Email:</strong> <span id="submittedEmail"></span></p>
+                <p><strong>Message:</strong> <span id="submittedMessage"></span></p>
+            </div>
+        </div>
+    </div>
+</body>
+<link rel="stylesheet" href="style.css">
+</html>
